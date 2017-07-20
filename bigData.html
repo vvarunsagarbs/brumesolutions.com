@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+
+      <title>Brume Solutions</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
+      <!-- JQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- /JQuery -->
+
+      <!-- Bootstrap  -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- /Bootstrap  -->
+
+      <!-- Font Awesome -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- /Font Awesome -->
+
+      <!-- MDL Icons-->
+       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+       <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+      <!-- /MDL Icons-->
+    <!-- /CDN -->
+
+    <!-- Self Hosted -->
+    <script src="lib/angular.min.js"></script>
+      <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+
+      <!-- Custom JS -->
+        <!-- <script src="js/app.min.js"></script> -->
+        <script src="js/app.js"></script>
+        <script src="js/script.js"></script>
+    <!-- /Self Hosted -->
+
+  </head>
+  <body data-ng-app="brumeSolutions" data-ng-controller="HomeController" id="indexBackground">
+    <!-- <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script> -->
+
+    <!-- Navbar -->
+    <div class="container-fluid" style="width:100%;position:fixed;z-index:10;">
+      <div class="row">
+        <div class="myTopNavBar" style="background-color:white;height:90px;">
+          <div class="col-md-2 col-sm-4 col-xs-4" style="text-align:center;">
+            <img src="img/logo1.png" alt="Brume Solutions Pvt Ltd" style="width:75%;"/>
+          </div>
+          <div class="col-md-9 col-md-offset-1 col-sm-8 col-xs-8" style="text-align:right;">
+            <div class="showInMobileScreen" style="padding:15px;" data-ng-click="toggleMobileMenu()"><i class="material-icons" id="mobileMenuIcon">menu</i></div>
+            <ul id="myTopNavBarMenu" class="hideInMobileScreen">
+              <a href="index.html" data-ng-mouseover="setActiveDropDownMenu('none');"><li>HOME</li></a>
+              <a href="#" data-ng-mouseover="setActiveDropDownMenu('priority');"><li>PRIORITY</li></a>
+              <a href="#" data-ng-mouseover="setActiveDropDownMenu('technology');"><li>TECHNOLOGY</li></a>
+              <a href="index.html#aboutUs" data-ng-mouseover="setActiveDropDownMenu('about');"><li>ABOUT US</li></a>
+              <a href="index.html#contactUs" data-ng-mouseover="setActiveDropDownMenu('none');"><li>CONTACT US</li></a>
+            </ul>
+          </div>
+        </div>
+        <div class="center" data-ng-show="mobileMenu=='active'">
+          <ul id="navSubmenu">
+            <li><a href="index.html#" ng-click="toggleMobileMenu()">HOME</a></li>
+            <li><a href="mCloud.html" ng-click="toggleMobileMenu()">MANAGED CLOUD</a></li>
+            <li><a href="bigData.html">BIG DATA</a></li>
+            <li><a href="webSoft.html">WEB & SOFTWARE DEVELOPMENT</a></li>
+            <li><a href="microsoftAWS.html">MICROSOFT & AWS</a></li>
+            <li><a href="office365.html">OFFICE 365</a></li>
+            <li><a href="index.html#contactUs" ng-click="toggleMobileMenu()">CONTACT US</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Priority Sub Menu -->
+        <div class="col-md-3 col-md-offset-6" data-ng-show="activeDropDownMenu=='priority'" data-ng-mouseleave="setActiveDropDownMenu('none');">
+          <ul id="navSubmenu">
+            <li><a href="mCloud.html">MANAGED CLOUD</a></li>
+            <li><a href="bigData.html">BIG DATA</a></li>
+            <li><a href="webSoft.html">WEB AND SOFTWARE DEVELOPMENT</a></li>
+          </ul>
+        </div>
+        <!-- /Priority Sub Menu -->
+        <!-- Technology Sub Menu -->
+        <div class="col-md-3 col-md-offset-7" data-ng-show="activeDropDownMenu=='technology'" data-ng-mouseleave="setActiveDropDownMenu('none');">
+          <ul id="navSubmenu">
+            <li><a href="microsoftAWS.html">MICROSOFT & AWS</a></li>
+            <li data-ng-mouseover="showRoadMapSubMenu = 'true'" data-ng-mouseleave="showRoadMapSubMenu = 'false'"><a href="training.html">ROADMAP <span style="float:right;"> > </span></a></li>
+          </ul>
+          <div style="position:absolute;right:-85px;top:35px;" data-ng-mouseleave="showRoadMapSubMenu = 'false'">
+            <ul id="navSubmenu">
+              <li style="padding:5px 15px 5px 15px;"><a href="office365.html">Office 365</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- /Technology Sub Menu -->
+      </div>
+    </div>
+    <!-- /Navbar -->
+
+    <!-- Fixed Social Media Icons -->
+    <div class="fixedSocialMediaDiv" data-ng-mouseover="viewServiceSubmenu='false'">
+      <!-- Social Media Icons -->
+      <!-- <div class="fb-follow" data-href="https://www.facebook.com/zuck" data-layout="standard" data-size="small" data-show-faces="true"></div> -->
+      <!-- <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script> -->
+      <!-- <script type="IN/Share" data-counter="right"></script> -->
+      <!-- <a href="#"><i class="fa fa-facebook-official" id="sideSocialMediaIcons" style="color:#4867AA" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-linkedin-square" id="sideSocialMediaIcons" style="color:#0077B5" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-google-plus-square" id="sideSocialMediaIcons" style="color:#D94835" aria-hidden="true"></i></a> -->
+      <!-- /Social Media Icons -->
+    </div>
+    <!-- /Fixed Social Media Icons -->
+
+    <!-- Overlapse the Fixed navbar -->
+    <div style="height:80px;background-color:white;"></div>
+    <!-- /Overlapse the Fixed navbar -->
+
+    <div style="padding:50px 0px 50px 0px;height:530px;background: url('img/bigData.jpg');background-size:cover">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-4" style="text-align:right;color:white;">
+            <div style="height:50px;"></div>
+            <h1 style="font-weight:700">
+              BigData
+            </h1>
+            <hr style="border-width:2px;">
+            <div style="height:50px;"></div>
+            <span style="padding:15px;border:1px solid white;border-radius:5px;">GET IN TOUCH</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" style="background-color:white;">
+      <div class="row" style="padding:50px;">
+        <div class="col-md-10 col-md-offset-1">
+          <h3 style="text-align:center;border-bottom:1px solid black;padding:10px;">Big Data</h3>
+          <p>It’s the world’s most emerging and heavily used technology considering the continuous increment of data in today’s fast growing world.</p>
+          <p>From the article written by Mr Colin white he mentioned
+          It is important to realize that big data comes in many shapes and sizes. It also has many different uses – real-time fraud detection, web display advertising and competitive analysis, call center optimization, social media and sentiment analysis, intelligent traffic management and smart power grids, to name just a few. All of these analytical solutions involve significant (and growing) volumes of both multi-structured and structured data.
+          Many of these analytical solutions were not possible previously because they were too costly to implement, or because analytical processing technologies were not capable of handling the large volumes of data involved in a timely manner. In some cases, the required data simply did not exist in an electronic form.
+          New and evolving analytical processing technologies now make possible what was not possible before. Examples include:
+          <ul>
+            <li> New data management systems that handle a wide variety of data from sensor data to web and social media data.</li>
+            <li> Improved analytical capabilities (sometimes called advanced or big analytics) including event, predictive and text analytics.</li>
+            <li> Faster hardware ranging from faster multi-core processors and large memory spaces, to solid-state drives and tiered data storage for handling hot and cold data.
+            Supporting big data involves combining these technologies to enable new solutions that can bring significant benefits to the business.</li>
+          </ul>
+          </p>
+          <p>Brume Solutions work with following Big data platforms
+          <ul>
+            <li>NoSQL (Azure Cosmos DB)</li>
+            <li>Cassandra</li>
+          </ul>
+          To learn more about how these platforms can benefit your business, write to us at <a>info@brumesolutions.com.</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer" data-ng-mouseover="viewServiceSubmenu='false'">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 col-xs-12">
+            <span class="white" style="font-size:20px;">ABOUT US</span>
+            <hr style="border-color: #22B663;">
+            <div class="row" style="text-align:left;padding:0px 15px 0px 15px;">
+              A cloud based company offering cloud & on premise solutions like ERP, Inventory management etc in affordable cost. We believe in providing quality services to its customer with compromising the ethics also believe in Customer’s first approach which highlights our commitments & believe towords customer.
+            </div>
+            <div class="row center">
+              <!-- Social Media Icons -->
+              <a href="#"><i class="fa fa-facebook-official" id="footerSocialMediaIcons" style="color:#4867AA" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-linkedin-square" id="footerSocialMediaIcons" style="color:#0077B5" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-google-plus-square" id="footerSocialMediaIcons" style="color:#D94835" aria-hidden="true"></i></a>
+              <!-- /Social Media Icons -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 col-xs-12">
+            <span class="white" style="font-size:20px;">INFORMATION</span>
+            <hr style="border-color: #22B663;">
+            <div class="row left">
+              <div class="col-md-9 col-md-offset-2">
+                <p class="footerColor">&gt<a href="microsoftAWS.html" id="footerInformationContent">Microsoft & AWS</a>
+                  <p class="footerColor">&gt<a href="office365.html" id="footerInformationContent">Office 365</a>
+                <p class="footerColor">&gt<a href="mCloud.html" id="footerInformationContent">Managed Cloud</a>
+                <p class="footerColor">&gt<a href="bigData.html" id="footerInformationContent">Big Data</a>
+                <p class="footerColor">&gt<a href="webSoft.html" id="footerInformationContent">Web & Software Development</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="row">
+              <span class="white" style="font-size:20px;">CONTACT INFO</span>
+              <hr style="border-color: #22B663;">
+            </div>
+            <div class="row" style="padding:5px;">
+              <div class="col-md-2 col-sm-2 col-xs-2 center">
+                <i class="material-icons" id="contactFormIcons">place</i>
+              </div>
+              <div class="col-md-10 col-sm-10 col-xs-10 left">
+                Shop No 14, Plot No 24 Tharwani Heritage,<br /> Sector 7,Khargar Navi Mumbai,<br /> Mumbai City MH 410210 IN
+              </div>
+            </div>
+            <div class="row" style="padding:5px;">
+              <!-- <div class="col-md-2 col-sm-2 col-xs-2 center">
+                <i class="material-icons" id="contactFormIcons">call</i>
+              </div>
+              <div class="col-md-10 col-sm-10 col-xs-10 left">
+                (+91) 9944467632
+              </div> -->
+            </div>
+            <div class="row" style="padding:5px;">
+              <div class="col-md-2 col-sm-2 col-xs-2 center">
+                <i class="material-icons" id="contactFormIcons">email</i>
+              </div>
+              <div class="col-md-10 col-sm-10 col-xs-10 left">
+                info@brumesolutions.com
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span>Copyright 2017 @ Brume Solutions Pvt Ltd</span>
+    </div>
+    <!-- /Footer -->
+
+    <script>
+      // function signOut() {
+      //    var auth2 = gapi.auth2.getAuthInstance();
+      //    auth2.signOut().then(function () {
+      //      console.log('User signed out.');
+      //    });
+      //  }
+      //
+      // function onSignIn(googleUser) {
+      //   var profile = googleUser.getBasicProfile();
+      //   console.log('ID: ' + profile.getId());
+      //   console.log('Name: ' + profile.getName());
+      //   console.log('Given Name: ' + profile.getGivenName());
+      //   console.log('Family Name: ' + profile.getFamilyName());
+      //   console.log('Image URL: ' + profile.getImageUrl());
+      //   console.log('Email: ' + profile.getEmail());
+      // }
+    </script>
+  </body>
+</html>

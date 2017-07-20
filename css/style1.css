@@ -1,0 +1,163 @@
+/*-------------------------------------------------------------*/
+/*Typography*/
+/*-------------------------------------------------------------*/
+.div-header {
+  margin-top: 20px;
+  padding: 30px;
+  text-align:center;
+  font-weight: bold;
+  font-size: 30px;
+  color: #CBCBCB;
+}
+
+.center {
+  text-align:center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.white {
+  color:white;
+}
+
+.footerColor {
+  color: #ABABAB;
+}
+
+#heading-text {
+  padding: 0px 10px 10px 10px;
+  text-align:left;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/*------------------------------------------------------------------*/
+/*NavBar*/
+/*------------------------------------------------------------------*/
+.myTopNavBar {
+  background-color:white;
+  height:75px;
+  box-shadow: 0px 4px 8px #E7E7E7;
+}
+
+/*TopNavBarMenu*/
+ul#myTopNavBarMenu {
+  padding:30px;
+}
+ul#myTopNavBarMenu li{
+  display:inline;
+  padding:15px;
+  border-radius: 5px;
+  font-weight:bold;
+}
+ul#myTopNavBarMenu li:hover{
+  background-color: black;
+}
+ul#myTopNavBarMenu a{
+  font-weight:bold;
+  color: black;
+}
+ul#myTopNavBarMenu a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+/*Fixed Social Media Icons*/
+.fixedSocialMediaDiv {
+  position:fixed;
+  left: 97%;
+  width:3%;
+  z-index: 10;
+  top:100px;
+  margin:1px;
+  text-align: right;
+}
+
+#sideSocialMediaIcons {
+  font-size: 45px;
+}
+
+/*------------------------------------------------------------------
+Product and Services
+------------------------------------------------------------------*/
+.serviceItem {
+  height: 250px;
+  text-align:center;
+  border:0.1px solid #F1F1F1;
+  background-color: white;
+}
+.serviceItem:hover {
+  background-color: #22B663;
+  color:white;
+}
+
+#serviceItemIcon {
+  color: #22B663;
+  font-size: 60px;
+  margin:65px 65px 20px 65px;
+}
+
+#serviceItemHead {
+  color:black;
+  font-size: 16px;
+}
+/*---------------------------------------------------*/
+ /*Contact US*/
+ /*---------------------------------------------------*/
+#contact-form-inputs {
+  border:1px solid #DDDDDD;
+  padding: 10px 20px 10px 20px;
+  font-size: 18px;
+  color: #DDDDDD;
+}
+
+#contact-form-inputs:focus {
+  border-color: #22B663;
+}
+
+#contactFormSubmitButton {
+    margin:12px;
+    padding: 10px 20px 10px 20px;
+    border:1px solid #22B663;
+    color:white;
+    background-color: #22B663;
+    border-radius: 20px;
+}
+
+#contactFormSubmitButton:hover {
+    background-color: white;
+    border:1px solid #22B663;
+    color:#22B663;
+}
+
+#contactFormIcons {
+    color: #22B663;
+}
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+#footer {
+  background-color: #1D1D1D;
+  text-align:center;
+  color: #ABABAB;
+  padding:50px;
+}
+#footerSocialMediaIcons {
+  font-size: 35px;
+  margin:20px;
+}
+#footerInformationContent {
+  padding: 10px;
+  color: #ABABAB;
+}
+#footerInformationContent:hover {
+  text-decoration: none;
+  padding: 15px;
+}
