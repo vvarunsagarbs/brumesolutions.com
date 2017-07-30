@@ -1,3 +1,21 @@
+#scrollToTop {
+  position:fixed;
+  background-color:white;
+  padding:8px 10px 8px 10px;
+  right:10px;
+  bottom:5px;
+  box-shadow:0px 2px 4px grey;
+  z-index:6;
+}
+#scrollToBottom {
+  position:fixed;
+  background-color:white;
+  padding:8px 10px 8px 10px;
+  right:10px;
+  top:115px;
+  box-shadow:0px 2px 4px grey;
+  z-index:6;
+}
 /*-------------------------------------------------------------*/
 /*Typography*/
 /*-------------------------------------------------------------*/

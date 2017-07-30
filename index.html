@@ -390,6 +390,24 @@
       <span>Copyright 2017 @ Brume Solutions Pvt Ltd</span>
     </div>
     <!-- /Footer -->
+    <!-- Scrollers -->
+    <div id="scrollToBottom" onclick="window.scrollTo(0,document.body.scrollHeight);" style="background-color:rgba(0,0,0,0.5);color:white;"><i class="fa fa-fw fa-angle-down pullRight" style="font-size:18px;"></i></div>
+    <div id="scrollToTop" onclick="window.scrollTo(0,0);" style="background-color:rgba(0,0,0,0.5);color:white;"><i class="fa fa-fw fa-angle-up pullRight" style="font-size:18px;"></i></div>
+    <script>
+      //Scroll Detector
+      window.onscroll = function() {myFunction()};
+      document.getElementById("scrollToTop").style.visibility = "hidden";
+      document.getElementById("scrollToBottom").style.visibility = "hidden";
+      function myFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+          document.getElementById("scrollToTop").style.visibility = "visible";
+          document.getElementById("scrollToBottom").style.visibility = "visible";
+        } else {
+          document.getElementById("scrollToTop").style.visibility = "hidden";
+          document.getElementById("scrollToBottom").style.visibility = "hidden";
+        }
+      }
+    </script>
 
     <script>
       // function signOut() {
